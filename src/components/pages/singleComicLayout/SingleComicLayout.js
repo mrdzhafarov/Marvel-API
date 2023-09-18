@@ -11,8 +11,12 @@ const SingleComicLayout = ({data}) => {
         <div className="single-comic">
             <Helmet>
                 <meta
-                    name={description}
+                    name='description'
                     content={`${title} comics book`}
+                />
+                <meta 
+                    name="keywords"    
+                    content={title} 
                 />
                  <title>{title}</title>
             </Helmet>

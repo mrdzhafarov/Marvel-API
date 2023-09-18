@@ -11,6 +11,10 @@ const ComicsPage = () => {
           name='description'
           content='Page with list of our comics'
         />
+         <meta 
+              name="keywords"    
+              content='Comics book' 
+         />
         <title>Comics Page</title>
       </Helmet>
       <AppBanner />
