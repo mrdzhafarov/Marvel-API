@@ -9,11 +9,11 @@ import './charInfo.scss';
 const CharInfo = (props) => {
   const [char, setChar] = useState(null);
 
-  const { getCharacter, clearError, process, setProcess } =
-    useMarvelService();
+  const { getCharacter, clearError, process, setProcess } = useMarvelService();
 
   useEffect(() => {
     updateChar();
+    // eslint-disable-next-line
   }, [props.charId]);
 
   const updateChar = () => {
@@ -77,10 +77,11 @@ const View = ({ data }) => {
       <ul className='char__comics-list'>
         {comics.length > 0 ? null : 'There is no comics with this character'}
         {comics.map((item, i) => {
+          // eslint-disable-next-line
           if (i > 9) return;
           return (
             <li
-              key={i + 1}
+              key={i}
               className='char__comics-item'
             >
               {item.name}
